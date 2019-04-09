@@ -116,7 +116,8 @@ mod rsa;
 
 pub mod signature;
 
-mod sealed {
+/// Exposed for offst
+pub mod sealed {
     /// Traits that are designed to only be implemented internally in *ring*.
     //
     // Usage:
@@ -129,5 +130,5 @@ mod sealed {
     //
     // impl sealed::Sealed for MyType {}
     // ```
-    pub trait Sealed {}
+    pub unsafe trait Sealed {}
 }
